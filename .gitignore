@@ -11,7 +11,5 @@ Cargo.lock
 **/*.rs.bk
 
 *.iml
-*.rs
-*.sh
 .idea
 res

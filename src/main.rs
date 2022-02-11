@@ -19,7 +19,7 @@ struct Cli {
     border: u32,
 
     /// From input to output level threshold to cut off
-    #[structopt(short, long, default_value = "90")]
+    #[structopt(short, long, default_value = "40")]
     threshold: u8,
 
     /// Region size: usually size of center of sample
