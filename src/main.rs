@@ -14,9 +14,9 @@ struct Cli {
     #[structopt(flatten)]
     verbosity: Verbosity,
 
-    /// How many pixels from border to skip?
-    #[structopt(short, long, default_value = "100")]
-    border: u32,
+//    /// How many pixels from border to skip?
+//    #[structopt(short, long, default_value = "0")]
+//    border: u32,
 
     /// From input to output level threshold to cut off
     #[structopt(short, long, default_value = "40")]
