@@ -61,7 +61,7 @@ fn main() -> CliResult {
     match ! pxls.is_empty() {
         true => {
             if pxls.len() > 1000 && !args.forced {
-                eprintln!("Got too much bright pixels ({} > 1000).", pxls.len());
+                warn!("Got too much bright pixels ({} > 1000).", pxls.len());
                 assert!(args.forced, "Use -f to force calculation.");
             }
             // 2. {r}, {p}
@@ -90,11 +90,11 @@ fn main() -> CliResult {
                 println!("[ {} : {} : {} ]", r.c.x, r.c.y, r.c.v);
             }
 
-            eprintln!("{:?} finished successfully", args.target);
+            info!("{:?} finished successfully", args.target);
             Ok(())
         }
         false => {
-            eprintln!(
+            warn!(
                 "No pixels in {:?} brighter than {}",
                 args.target, args.threshold
             );
